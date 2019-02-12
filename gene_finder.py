@@ -1,14 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 GENE_FINDER PROJECT
-
 @author: Galip Sina Berik
-
-I have tried my best to finish but stuck at the 5th question
-I have also kept my previous attempts as Comments
-I made us of all NINJA hour on Monday
-The ninja's at 7-9 shift was very helpful.
-Thank you very much.
 """
 
 import random
@@ -23,7 +16,6 @@ def shuffle_string(s):
     return ''.join(random.sample(s, len(s)))
 
 # YOU WILL START YOUR IMPLEMENTATION FROM HERE DOWN ###
-
 
 def get_complement(nucleotide):
     """ Returns the complementary nucleotide
@@ -54,9 +46,6 @@ def get_complement(nucleotide):
 
         complement = complement + var
     return complement
-
-    # TODO: implement this
-
 
 
 def get_reverse_complement(dna):
@@ -125,7 +114,7 @@ def find_all_ORFs_oneframe(dna):
     ORF2 = []
     x = 0
     StartCodon = 'ATG'
-    while x <= len(dna):  #I guess the problem is here
+    while x <= len(dna):  
         i = dna[x:x+3]
         if i == StartCodon:
             ORF = rest_of_ORF(dna[x:])
